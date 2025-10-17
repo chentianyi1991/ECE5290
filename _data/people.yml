@@ -1,0 +1,19 @@
+# _data/people.yml
+
+- name: "Tianyi Chen"
+  role: "Instructor"
+  email: "tianyi.chen@cornell.edu"
+  photo: "/assets/profile-pics/TianyiChen_small.jpeg"
+  homepage: "https://chentianyi19.github.io/"
+ 
+- name: "Yuheng Wang"
+  role: "Teaching Assistant"
+  email: "yw634@cornell.edu"
+  photo: "/assets/people/yuheng.jpg"
+  homepage: "https://sites.google.com/cornell.edu/yuhengwang"
+
+- name: "Anisha Kechaphna"
+  role: "Grader"
+  email: "ak2693@cornell.edu"
+  photo: "/assets/people/anisha.jpg"
+  homepage: "https://www.linkedin.com/in/anisha-ks/?originalSubdomain=in"

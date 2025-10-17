@@ -1,0 +1,106 @@
+<section id="modules" class="docs-section">
+  <h4>Modules</h4>
+
+  {%- assign mods = site.data.modules | sort: "date" -%}
+  {%- assign all_weeks = mods | map: "week" | uniq -%}
+
+  <div class="modules-accordion">
+  {%- for w in all_weeks -%}
+    {%- assign week_items = mods | where: "week", w | sort: "date" -%}
+    {%- assign first = week_items | first -%}
+    {%- assign last  = week_items | last  -%}
+
+    {%- assign start_ymd = first.date | date: "%Y-%m-%d" -%}
+    {%- assign end_ymd   = last.date  | date: "%Y-%m-%d" -%}
+
+    <!-- Neutral render: no server-side highlight/open; add machine-readable dates -->
+    <details class="week"
+             data-week="{{ w }}"
+             data-start="{{ start_ymd }}"
+             data-end="{{ end_ymd }}">
+      <summary>
+        <span class="wk">Week {{ w }}</span>
+        <span class="range">{{ first.date | date: "%b %d" }} – {{ last.date | date: "%b %d" }}</span>
+        <span class="count">{{ week_items | size }} sessions</span>
+        <span class="badge now" data-role="now-badge" style="display:none;">This week</span>
+      </summary>
+
+      <ul class="sessions">
+        {%- for m in week_items -%}
+        <li class="session" data-date="{{ m.date | date: '%Y-%m-%d' }}">
+          <div class="date">{{ m.date | date: "%a, %b %d" }}</div>
+          <div class="title">
+            <strong>{{ m.title }}</strong>
+            {%- if m.summary %}<div class="sum">{{ m.summary }}</div>{% endif -%}
+            <div class="meta">
+              {%- if m.slides_url %}<a class="badge" href="{{ m.slides_url | relative_url }}">Slides</a>{% endif -%}
+              {%- if m.note %}<span class="badge alt">{{ m.note }}</span>{% endif -%}
+              {%- if m.title contains "No class" %}<span class="badge neutral">No Class</span>{% endif -%}
+              {%- if m.title contains "Exam" %}<span class="badge neutral">Exam</span>{% endif -%}
+            </div>
+          </div>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </details>
+  {%- endfor -%}
+  </div>
+
+  <script>
+  (function () {
+    // Local 'today' at midnight for visitor
+    const today = new Date(); today.setHours(0,0,0,0);
+
+    const weeks = Array.from(document.querySelectorAll('.modules-accordion details.week')).map(d => {
+      const startISO = d.getAttribute('data-start'); // YYYY-MM-DD
+      const endISO   = d.getAttribute('data-end');   // YYYY-MM-DD
+      if (!startISO || !endISO) return null;
+
+      // Treat week bounds as local end-of-day
+      const start = new Date(startISO + 'T00:00:00');
+      const end   = new Date(endISO   + 'T23:59:59');
+      return { el: d, start, end, startISO, endISO };
+    }).filter(Boolean);
+
+    if (!weeks.length) return;
+
+    // 1) Prefer the week containing 'today'
+    let chosen = weeks.find(w => w.start <= today && today <= w.end);
+
+    // 2) If none, choose the next upcoming (smallest start >= today)
+    if (!chosen) {
+      const upcoming = weeks
+        .filter(w => w.start >= today)
+        .sort((a,b) => a.start - b.start);
+      if (upcoming.length) chosen = upcoming[0];
+    }
+
+    // 3) If still none (all in the past), choose the last week
+    if (!chosen) {
+      chosen = weeks.slice().sort((a,b) => b.end - a.end)[0];
+    }
+
+    // Apply highlight to chosen only
+    weeks.forEach(w => {
+      w.el.classList.toggle('current-week', w === chosen);
+      if (w === chosen) {
+        // Open the chosen accordion
+        w.el.setAttribute('open', '');
+        // Show the "This week" badge
+        const badge = w.el.querySelector('[data-role="now-badge"]');
+        if (badge) badge.style.display = 'inline-block';
+      } else {
+        w.el.removeAttribute('open');
+        const badge = w.el.querySelector('[data-role="now-badge"]');
+        if (badge) badge.style.display = 'none';
+      }
+    });
+
+    // (Optional) Mark today's sessions inside the chosen week
+    // Your CSS already supports .sessions .session.today and .badge.today (if you want to show it).
+    const todayISO = today.toISOString().slice(0,10); // YYYY-MM-DD
+    const todaySessions = chosen.el.querySelectorAll('.session[data-date="' + todayISO + '"]');
+    todaySessions.forEach(li => li.classList.add('today'));
+  })();
+  </script>
+</section>

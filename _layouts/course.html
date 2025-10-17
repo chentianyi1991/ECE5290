@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ECE 5290/7290 | Distributed Opt for ML & AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet'>
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/normalize.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/skeleton.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/libs/custom/my_css.css' | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/CT_logo.jpg' | prepend: site.baseurl }}">
+</head>
+<body>
+<div class="container">
+
+  
+ <!-- ====== Course Header ====== -->
+<header style="text-align: center; margin: 40px 0;">
+  <!-- Logo ABOVE the course title -->
+  <div style="margin-top: 15px;">
+    <img src="{{ '/assets/tech.jpeg' | relative_url }}"
+         alt="Cornell Tech"
+         style="height: 125px; max-width: 160%; border-radius: 12px;">
+  </div>
+
+  <h3 style="margin-top: 1rem;">
+    <b>ECE 5290/7290 & ORIE 5290: Distributed Optimization for Machine Learning and AI</b>
+  </h3>
+
+  <p style="margin-top: 1.5rem;">
+    <strong>Instructor:</strong>
+    <a href="https://chen.tech.cornell.edu/">Tianyi Chen</a>
+    &nbsp;|&nbsp;
+    <a href="mailto:tianyi.chen@cornell.edu">tianyi.chen@cornell.edu</a>
+    &nbsp;|&nbsp;
+    <strong>Semester:</strong> Fall 2025
+  </p>
+
+  <p style="margin-top: 0.2rem;">
+    <strong>Class time:</strong> MoWe 1:25 PM – 2:40 PM
+    &nbsp;|&nbsp;
+    <strong>Location:</strong> Cornell Tech, Bloomberg Center 161
+  </p>
+</header>
+
+  <!-- Navigation -->
+  <nav class="navbar" style="margin-bottom: 20px;">
+    <ul class="navbar-list" style="display: flex; justify-content: center; gap: 20px; list-style: none;">
+      <li><a class="navbar-link" href="#overview">Overview</a></li>
+      <li><a class="navbar-link" href="#modules">Modules</a></li>
+      <li><a class="navbar-link" href="#assignments">Assignments</a></li>
+      <li><a class="navbar-link" href="#policies">Policies</a></li>
+      <li><a class="navbar-link" href="#resources">Resources</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ========== INSTRUCTORS, TAs, GRADERS ========== -->
+  <!-- Content Sections -->
+  <section id="overview">
+    <h4>Overview</h4>
+    <p>
+This is a graduate-level course about theory, algorithms, and applications of distributed optimization and machine learning. 
+The course covers the basics of distributed optimization and learning algorithms, and their performance analyses 
+when they are used to solve large-scale distributed problems arising in AI, machine learning, signal processing, communication networks, and power systems.
+    </p>
+    <ul>
+      <li><strong>Prerequisites:</strong> Linear Algebra, Calculus, Probability, and Basic ML and optimization background</li>
+      <li><strong>Format:</strong> Lectures + Homework + Exam (only a little) + Project</li>
+    </ul>
+  </section>
+
+  <!-- ====== Notice Box ====== -->
+<div class="notice-box">
+  <p><strong>Public resources:</strong> The lecture slides and assignments will be posted online as the course progresses.
+  We are happy for anyone to learn from these resources, but we cannot grade the work of any unenrolled students</p>
+
+  <p><strong>Cornell students:</strong> Students should ask all course-related questions on 
+  <a href="https://edstem.org/us/courses/83909/discussion" target="_blank" rel="noopener">Ed Discussion</a> 
+  and submit homeworks on 
+  <a href="https://canvas.cornell.edu/courses/81321" target="_blank" rel="noopener">Canvas</a>, 
+  where you will also find all the announcements.</p>
+</div>
+     {% include people.html %}
+  {% include modules.html %}
+  {% include assignments.html %}
+
+
+  <!-- ADDED: render page-specific content (your Suggested Readings & People from index.html) -->
+     {% include readings.html %}
+ 
+
+ 
+
+  <section id="resources">
+    <h4>Resources</h4>
+    <ul>
+      <li><a href="https://arxiv.org/pdf/1606.04838">Optimization Methods for Large-Scale Machine Learning</a> by Leon Bottou & Frank Curtis & Jorge Nocedal</li>
+      <li><a href="https://www.jacobaguirre.com/First%20Order%20Methods%20in%20Optimization.pdf">First-Order Methods in Optimization</a> by Amir Beck</li>
+      <li><a href="https://large-scale-book.mathopt.com/LSCOMO.pdf">Large-Scale Convex Optimization: Algorithms & Analyses via Monotone Operators</a> by Ernest Ryu & Wotao Yin</li>
+    </ul>
+  </section>
+
+
+ 
+ 
+
+    <section id="policies">
+    <h4>Course Policies</h4>
+    <p>
+      Academic integrity, late submission, and collaboration policies will follow Cornell Tech standards.
+    </p>
+  </section>
+
+  <footer style="text-align:center; margin-top: 40px; font-size: 0.9em;">
+    &copy; 2025 Distributed Optimization for ML and AI | Cornell Tech
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+# _data/publications/papers.yml
+# =========================================
+# Suggested Readings for ECE 5290/7290
+# Distributed Optimization for Machine Learning and AI
+# =========================================
+
+- title: "Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers"
+  authors: "S. Boyd, N. Parikh, E. Chu, B. Peleato, J. Eckstein"
+  venue: "Foundations and Trends in Machine Learning, 2011"
+  note: "The classic monograph on ADMM—still the most cited reference for distributed convex optimization."
+  paper_pdf: "https://web.stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf"
+  year: 2011
+  tags: ["core", "decentralized"]
+
+- title: "Communication-Efficient Learning of Deep Networks from Decentralized Data"
+  authors: "H. B. McMahan, E. Moore, D. Ramage, S. Hampson, B. A. Arcas"
+  venue: "AISTATS, 2017"
+  note: "Introduces FedAvg, the foundational algorithm for federated learning."
+  paper_pdf: "https://arxiv.org/abs/1602.05629"
+  year: 2017
+  tags: ["core", "federated"]
+
+- title: "Advances and Open Problems in Federated Learning"
+  authors: "P. Kairouz, H. B. McMahan, B. Avent, A. Bellet, M. Bennis, A. N. Bhagoji, K. Bonawitz, et al."
+  venue: "arXiv preprint, 2021"
+  note: >
+    The definitive survey of federated learning—covering foundations, system challenges, privacy,
+    personalization, and open research directions. Essential background for advanced topics in this course.
+  paper_pdf: "https://arxiv.org/abs/1912.04977"
+  year: 2021
+  tags: ["core", "federated"]
+
+- title: "Achieving geometric convergence for distributed optimization over time-varying graphs"
+  authors: "A. Nedić, A. Olshevsky, W. Shi"
+  venue: "SIAM Journal on Optimization, 2017"
+  note: "Pioneering paper introducing gradient tracking, enabling linear convergence in  time-varying graphs."
+  paper_pdf: "https://arxiv.org/pdf/1607.03218"
+  year: 2017
+  tags: ["advanced", "decentralized"]
+
+- title: "Local SGD Converges Fast and Communicates Little"
+  authors: "S. U. Stich"
+  venue: "ICLR, 2019"
+  note: "Formal analysis of local SGD showing near-linear speedup with limited communication."
+  paper_pdf: "https://arxiv.org/abs/1805.09767"
+  year: 2019
+  tags: ["stochastic", "federated", "communication"]
+
+- title: "Communication Compression for Decentralized Training"
+  authors: "H. Tang, X. Lian, M. Yan, C. Zhang, J. Liu"
+  venue: "NeurIPS, 2018"
+  note: "Shows how gradient compression techniques accelerate decentralized training while maintaining convergence."
+  paper_pdf: "https://proceedings.neurips.cc/paper_files/paper/2018/file/44feb0096faa8326192570788b38c1d1-Paper.pdf"
+  year: 2018
+  tags: ["communication", "decentralized", "advanced"]
+
+- title: "DeepSpeed: System Optimizations Enable Training Beyond 100 Billion Parameters"
+  authors: "J. Rasley, S. Rajbhandari, O. Ruwase, Y. He"
+  venue: "Proceedings of the International Conference for High Performance Computing (SC), 2020"
+  note: "System-level innovations enabling efficient large-scale model training—essential reading for project work."
+  paper_pdf: "https://2024.sci-hub.se/8649/8d8e47466ad5e4bf93349ed52cceb829/rasley2020.pdf"
+  year: 2020
+  tags: ["systems", "large-scale", "advanced"]
+  
+- title: "On the Convergence of Decentralized Gradient Descent"
+  authors: "K. Yuan, Q. Ling, W. Yin"
+  venue: "SIAM Journal on Optimization, vol. 26, no. 3, pp. 1835–1854, 2016"
+  note: >
+    A seminal theoretical study of decentralized gradient descent (DGD), providing a convergence rate
+    analysis for both diminishing and fixed step sizes over static networks.
+  paper_pdf: "https://arxiv.org/abs/1310.7063"
+  year: 2016
+  tags: ["core", "decentralized"]
+
+- title: "LAG: Lazily Aggregated Gradient for Communication-Efficient Distributed Learning"
+  authors: "T. Chen, G. Giannakis, T. Sun, W. Yin"
+  venue: "NeurIPS, 2018"
+  note: "Introduces LAG, which adaptively skips redundant gradient updates to reduce communication cost without harming convergence."
+  paper_pdf: "https://proceedings.neurips.cc/paper_files/paper/2018/file/feecee9f1643651799ede2740927317a-Paper.pdf"
+  year: 2018
+  tags: ["communication", "decentralized", "advanced"]
+
+- title: "EXTRA: An Exact First-Order Algorithm for Decentralized Consensus Optimization"
+  authors: "W. Shi, Q. Ling, K. Yuan, G. Wu, W. Yin"
+  venue: "SIAM Journal on Optimization, 2015"
+  note: "A breakthrough decentralized algorithm achieving exact convergence to the global optimum using local updates."
+  paper_pdf: "https://arxiv.org/abs/1411.4186"
+  year: 2015
+  tags: ["core", "decentralized", "advanced"]

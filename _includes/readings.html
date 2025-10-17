@@ -1,0 +1,37 @@
+<!-- ========== SUGGESTED READINGS (YAML-driven) ========== -->
+<section class="docs-section" id="readings">
+  <h4>Suggested Readings</h4>
+  <p style="font-size:12px">
+    These papers offer background and provide deeper insights into distributed optimization and its applications in machine learning. 
+  </p>
+
+  {%- comment -%} sort newest first; remove if you prefer input order {%- endcomment -%}
+  {%- assign papers = site.data.papers | sort: "year" | reverse -%}
+
+  <div id="papers-all">
+    {%- for paper in papers -%}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}; <i>{{ paper.venue }}</i></p>
+        {%- if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
+
+        <div class="paper-buttons">
+          {%- assign links = 
+            "paper_pdf|Paper,slides|Slides,poster|Poster,video|Video,code|Code,talk|Talk,data|Data" | split: "," -%}
+          {%- for pair in links -%}
+            {%- assign parts = pair | split: "|" -%}
+            {%- assign key = parts[0] -%}
+            {%- assign label = parts[1] -%}
+            {%- assign url = paper[key] -%}
+            {%- if url and url != "" -%}
+              {%- assign is_external = url contains "://" -%}
+              <a class="button" 
+                 href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}" 
+                 target="_blank" rel="noopener">{{ label }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>

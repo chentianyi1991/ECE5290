@@ -1,0 +1,232 @@
+# One entry per module/week
+
+- week: 1
+  date: 2025-08-25
+  title: "Introduction & Motivation"
+  summary: >
+    Overview of course goals, applications of distributed optimization in modern AI and ML systems,
+    and motivating examples from large-scale model training and federated learning.
+  note: >
+    Welcome to the course! We’ll set the stage for why distributed optimization is now central to AI at scale.
+  slides_url: "/assets/slides/Lec1.pdf"
+
+  
+- week: 1
+  date: 2025-08-27
+  title: "ML fundamentals for optimization (ERM, supervised learning)"
+  summary: >
+    Review of empirical risk minimization (ERM), supervised learning frameworks, convexity basics,
+    and gradient-based learning methods.
+  slides_url: "/assets/slides/Lec2.pdf"
+ 
+- week: 2
+  date: 2025-09-01
+  title: "No class - Labor day"
+  
+- week: 2
+  date: 2025-09-03
+  title: "ML Fundamentals Continued: Optimization Viewpoint"
+  summary: >
+    From linear and nonlinear regression to general loss functions; connecting optimization to
+    machine learning tasks and understanding challenges in non-convex learning.
+  slides_url: "/assets/slides/Lec3.pdf"
+  
+- week: 3
+  date: 2025-09-08
+  title: "Optimization Basics I: Gradient Descent on Quadratic Problems"
+  summary: >
+    Derivation and intuition of gradient descent, convergence on quadratic objectives,
+    and the geometry of step sizes and conditioning.
+  slides_url: "/assets/slides/Lec4.pdf"
+  
+- week: 3
+  date: 2025-09-10
+  title: "Optimization Basics II: Convergence and Complexity"
+  note: "HW 1 due (9/12)"
+  summary: >
+    Convergence analysis for smooth and strongly convex functions; understanding sublinear and
+    linear rates of convergence for gradient descent.
+  slides_url: "/assets/slides/Lec5.pdf"
+  
+- week: 4
+  date: 2025-09-15
+  title: "Beyond Convexity: Non-Convex Landscapes and Smoothness"
+  summary: >
+    Extending gradient-based methods to non-convex settings; smoothness assumptions,
+    saddle points, and convergence guarantees.
+  slides_url: "/assets/slides/Lec6.pdf"
+  
+- week: 4
+  date: 2025-09-17
+  title: "Gradient Methods for Constrained Optimization"
+  summary: >
+    Projected gradient methods, constraint handling in distributed settings,
+    and convergence rates under constraints.
+  slides_url: "/assets/slides/Lec7.pdf"
+  
+- week: 5
+  date: 2025-09-22
+  title: "Stochastic Optimization: SGD, Minibatching, and Convergence"
+  summary: >
+    Fundamentals of stochastic gradient descent, convergence properties under noise,
+    and trade-offs between batch size and computation.
+  slides_url: "/assets/slides/Lec8.pdf"
+  
+- week: 5
+  date: 2025-09-24
+  title: "Variance Reduction and Momentum"
+  summary: >
+    Modern SGD enhancements — variance-reduced methods (SVRG) and momentum techniques
+    for accelerating convergence.
+  slides_url: "/assets/slides/Lec9.pdf"
+  
+- week: 6
+  date: 2025-09-29
+  title: "Variance Reduction and Momentum in Practice"
+  summary: >
+    Finite-sum optimization, adaptive methods (Adam, AdaGrad), and a deeper look at the
+    variance–bias trade-off in stochastic learning.
+  note: HW 2 due (9/26)
+  slides_url: "/assets/slides/Lec10.pdf"
+  
+- week: 6
+  date: 2025-10-01
+  title: "Consensus and Spectrum of Graphs"
+  note: "Project announced"
+  summary: >
+    Fundamentals of consensus algorithms, properties of doubly-stochastic matrices,
+    and spectral connectivity measures in networks.
+  slides_url: "/assets/slides/Lec11.pdf"
+  
+- week: 7
+  date: 2025-10-06
+  title: "Gossip and Random Walks"
+  summary: >
+    Randomized gossip algorithms, asynchronous communication, and relationships between
+    random walks and averaging in networks.
+  slides_url: "/assets/slides/Lec12.pdf"
+  
+- week: 7
+  date: 2025-10-08
+  title: "Data and Model parallelism in Distributed Training"
+  summary: >
+    Data and model parallelism in distributed training; local SGD, synchronization intervals,
+    and communication–computation balancing.
+  slides_url: "/assets/slides/Lec13.pdf"
+  
+- week: 8
+  date: 2025-10-13
+  title: "No class - Fall break"
+  
+- week: 8
+  date: 2025-10-15
+  title: "Communication-Efficient Distributed Methods"
+  summary: >
+    Quantization, sparsification, and local updates; techniques to reduce bandwidth
+    while preserving convergence in distributed learning.
+  slides_url: "/assets/slides/Lec14.pdf"
+  note: Practice problems announced
+  
+- week: 9
+  date: 2025-10-20
+  title: "Decentralized Algorithms: Consensus GD and Its Convergence"
+  summary: >
+    Analysis of decentralized gradient descent, spectral gap influence on convergence,
+    and geometric interpretation of consensus dynamics.
+  slides_url: "/assets/slides/Lec14.pdf"
+  note: HW 3 due (10/20)
+  
+- week: 9
+  date: 2025-10-22
+  title: "Decentralized Gradient Tracking and Its Convergence"
+  summary: >
+    Gradient tracking algorithms, convergence under directed and time-varying graphs.
+  slides_url: "/assets/slides/Lec15.pdf"
+  
+- week: 10
+  date: 2025-10-27
+  title: "No class - Asynchronous Office  Q&A on Ed Discussion and Emails"
+  note: Welcome Q&A for HWs 1-3 and Practice problems
+  
+- week: 10
+  date: 2025-10-29
+  title: In-person Exam
+  note: Closed book; one 2-page single-sided A4 sheet of notes.
+  note: Project Idea Due (11/1)
+    
+- week: 11
+  date: 2025-11-03
+  title: "Robust distributed optimization: adversaries, attacks and defenses"
+  summary: >
+    Robustness against adversarial clients, Byzantine attacks, and noisy updates;
+    algorithmic defenses and aggregation strategies.
+  note: Try every effort to attend; attendance bonus 
+  
+- week: 11
+  date: 2025-11-05
+  title: "Federated learning: personalization, fairness, and heterogeneity"
+  summary: >
+    Personalization techniques, fairness trade-offs, and handling heterogeneous data distributions
+    in federated settings.
+    
+- week: 12
+  date: 2025-11-10
+  title: "Asynchrony, Delays, and Straggler Mitigation"
+  summary: >
+    Asynchronous optimization, stale gradients, and system-level strategies
+    to mitigate delays and stragglers in large clusters.
+    
+- week: 12
+  date: 2025-11-12
+  title: From algorithms to system implementations
+  summary: >
+    Bridging theory and practice — implementing distributed optimization on modern hardware,
+    parameter servers, and deep learning frameworks.
+  note: HW 4 due (11/14)
+  
+- week: 13
+  date: 2025-11-17
+  title: "Distributed LLM post-training via deepspeed"
+  summary: >
+    Practical pipeline for distributed fine-tuning and instruction tuning of large language models
+    using DeepSpeed and ZeRO optimizations.
+
+- week: 13
+  date: 2025-11-19
+  title: Hypeparameter optimization for distributed learning
+  summary: >
+    Techniques for tuning learning rates, batch sizes, and communication frequency in distributed systems;
+    multi-fidelity and population-based search methods.
+    
+- week: 14
+  date: 2025-11-24
+  title: "Multi-objective training for distributed learning"
+  summary: >
+    Balancing multiple objectives in distributed training — accuracy, efficiency, and fairness.
+    Introduction to Pareto-optimal solutions and preference-guided optimization.
+    
+- week: 14
+  date: 2025-11-26
+  title: "No class - Thanksgiving"
+  note: HW 5 due (12/1)
+- week: 15
+  date: 2025-12-01
+  title: "Project presentation - Part I"
+  summary: >
+    ECE/ORIE 5290 student projects: educational presentations highlighting key papers, 
+    methods, and open challenges from the recent literature in distributed optimization. 
+    
+- week: 15
+  date: 2025-12-03
+  title: "Project presentation - Part II"
+  summary: >
+    ECE/ORIE 5290/ECE 7290 Students project presentations: showcasing research topics, key findings,
+    and proposed extensions in distributed optimization.
+    
+- week: 16
+  date: 2025-12-08
+  title: "Project presentation - Part III"
+  summary: >
+    ECE 7290 Students project presentations: showcasing research topics, key findings,
+    and proposed extensions in distributed optimization.
+  note: Project Report due (12/13)

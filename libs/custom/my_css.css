@@ -1,0 +1,513 @@
+h4 {
+  letter-spacing: .1rem; }
+.container {
+  max-width: 800px; }
+.header {
+  margin-top: 60px;
+  margin-bottom: 60px; 
+  text-align: left; }
+.main-description h1 {
+  margin-bottom: 0px; }
+.main-description p {
+  margin-bottom: 0px; }
+.main-description .fa {
+  font-size: 22px;
+  margin-top: 5px; }
+.paper {
+  margin-bottom: 20px }
+.paper .title {
+  /*text-transform: uppercase; */}
+.paper p {
+  margin-bottom: 2px }
+.paper-buttons {
+  margin-top: 5px }
+.paper .button {
+  display: inline-block;
+  height: 25px;
+  padding: 0 25px;
+  font-weight: 100;
+  line-height: 25px;
+  text-transform: none; }
+.section-header {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  font-weight: 600; }
+.docs-section {
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  margin-bottom: 0;}
+.footer {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid #eee;
+  padding: 15px 0 40px 0;
+  margin-bottom: 0;}
+.navbar {
+  display: none; }
+.title-subtitle h3 {
+  margin-bottom: 0px; }
+.title-subtitle h5 {
+  color: rgba(0, 0, 0, 0.60); }
+.image {
+  text-align: center; }
+
+/*  ================ Project styling  ================ */
+.project-container {
+  margin-bottom: 30px;
+}
+.project-image-container {
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 3px;
+  transition: 0.3s;
+}
+.project-image-container:hover {
+  transition: 0.3s;
+}
+.project-image-container:hover img {
+  opacity: 0.4;
+}
+.project-caption {
+  padding: 3px;
+}
+
+/* Larger than phone */
+@media (min-width: 550px) {
+  .header {
+    margin-top: 5rem; }
+}
+
+/* Default for desktop: stack vertically */
+.right-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start; /* default align on desktop */
+}
+
+/* On mobile: show side-by-side */
+@media (max-width: 768px) {
+    .main-description {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .right-logos {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* ensure full width so centering works */
+    margin-top: 15px;
+  }
+  .right-logos img {
+    height: 50px; /* Optional scaling for mobile */
+    margin: 0 5px; /* spacing between logos */
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  /* Navbar */
+  .navbar + .docs-section {
+    border-top-width: 0; }
+  .navbar,
+  .navbar-spacer {
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+  .navbar-spacer {
+    display: none; }
+  .navbar > .container {
+    width: 100%; }
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0; }
+  .navbar-item {
+    position: relative;
+    float: left;
+    margin-bottom: 0; }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222; }
+  .navbar-link.active {
+    color: #33C3F0; }
+  .has-docked-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .has-docked-nav .navbar-spacer {
+    display: block; }
+  /* Re-overiding the width 100% declaration to match size of % based container */
+  .has-docked-nav .navbar > .container {
+    width: 80%; }
+
+  /* Popover */
+  .popover.open {
+    display: block;
+  }
+  .popover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    top: 92%;
+    left: -50%;
+    -webkit-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
+       -moz-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
+            filter: drop-shadow(0 0 6px rgba(0,0,0,.1)); }
+  .popover-item:first-child .popover-link:after, 
+  .popover-item:first-child .popover-link:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .popover-item:first-child .popover-link:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px; }
+  .popover-item:first-child .popover-link:before {
+    border-color: rgba(238, 238, 238, 0);
+    border-bottom-color: #eee;
+    border-width: 11px;
+    margin-left: -11px; }
+  .popover-list {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .popover-item {
+    padding: 0;
+    margin: 0; }
+  .popover-link {
+    position: relative;
+    color: #222;
+    display: block;
+    padding: 8px 20px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1rem; }
+  .popover-item:first-child .popover-link {
+    border-radius: 4px 4px 0 0; }
+  .popover-item:last-child .popover-link {
+    border-radius: 0 0 4px 4px;
+    border-bottom-width: 0; }
+  .popover-link:hover {
+    color: #fff;
+    background: #33C3F0; }
+  .popover-link:hover,
+  .popover-item:first-child .popover-link:hover:after {
+    border-bottom-color: #33C3F0; }
+
+  .bio‑highlight {
+   background: #f0fbff;
+   border-left: 4px solid #2c3e50;
+   padding: 0.5rem 1.5rem;
+   margin: 1rem 0rem;
+  }
+
+ .bio‑highlight p {
+  color: #003366;
+  margin: 0;
+ }
+}
+
+.header-content h2 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+}
+
+.header-content h4 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Maintain fixed logo column width on desktop */
+.right-logos {
+  flex: 0 0 300px; /* same width as on personal site */
+}
+
+/* Responsive behavior: stack logos horizontally on small screens */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .right-logos {
+    flex: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .right-logos img {
+    height: 70px;
+  }
+}
+
+/* ====== MODULES SECTION FONT ENHANCEMENT ====== */
+.modules-accordion details { border: 1px solid #eee; border-radius: 10px; margin: 10px 0; background: #fff; }
+.modules-accordion summary { cursor: pointer; list-style: none; padding: 10px 14px; display: flex; gap: 12px; align-items: baseline; }
+.modules-accordion summary::-webkit-details-marker { display: none; }
+.modules-accordion .wk { font-weight: 700; }
+.modules-accordion .range { color: #666; font-size: 1.15rem; }
+.modules-accordion .count { margin-left: auto; color: #888; font-size: 1.15rem; }
+
+.modules-accordion .sessions { padding: 8px 16px 14px 16px; margin: 0; }
+.modules-accordion .session { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 8px 0; border-top: 1px dashed #eee; }
+.modules-accordion .session:first-child { border-top: none; }
+.modules-accordion .date { color: #666; font-size: 1.15rem; }
+.modules-accordion .sum { color: #555; font-size: 1.15rem; margin-top: 2px; }
+.modules-accordion .badge { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 1.1rem; margin-right: 6px; }
+.modules-accordion .badge.alt { border-color: #c9defc; background: #eef5ff; }
+.modules-accordion .badge.neutral { border-color: #e6e6e6; background: #f7f7f7; }
+
+@media (max-width: 640px) {
+  .modules-accordion .session { grid-template-columns: 1fr; }
+  .modules-accordion summary { flex-wrap: wrap; gap: 6px; }
+  .modules-accordion .count { width: 100%; order: 3; text-align: left; }
+}
+
+/* ========== MODULES STYLING ========== */
+/* --- Extend highlight across the full current week block --- */
+
+/* override white background from .modules-accordion details */
+.modules-accordion details.week.current-week {
+  background: #fafcff !important;    /* soft tint across whole accordion card */
+  border-radius: 10px;
+  overflow: hidden;                  /* prevent top/bottom margin gaps */
+  border: 1px solid #e1e8f7;
+}
+
+/* make the sessions area blend with the tint */
+.modules-accordion details.week.current-week .sessions {
+  background: transparent;
+  padding: 10px 18px 14px 18px;      /* match your base spacing */
+  margin: 0;
+}
+
+/* soften internal borders for aesthetic consistency */
+.modules-accordion details.week.current-week .session {
+  border-top: 1px dashed #dbe6f5;
+  background: transparent;
+}
+
+/* last child tidy-up */
+.modules-accordion details.week.current-week .session:last-child {
+  border-bottom: none;
+}
+
+/* Current week highlight (entire block) */
+details.week.current-week {
+  background: #fafcff;               /* soft blue tint for the whole week */
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Current week summary line */
+details.week.current-week > summary {
+  background: #f4f8ff;               /* slightly stronger header shade */
+  border-left: 4px solid #004B87;    /* Cornell Tech blue accent */
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+}
+
+/* Hover animation for summary (optional) */
+details.week.current-week > summary:hover {
+  background: #e8f0ff;
+}
+
+/* “This Week” badge */
+.badge.now {
+  background: #e6f0ff;
+  border-color: #004B87;
+  color: #004B87;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+
+/* Generic badge style (used for Slides, Notes, etc.) */
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.4rem;
+  border: 1px solid #d0d7de;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: #444;
+}
+ 
+
+/* Optional: add spacing between sessions for readability */
+.sessions .session {
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* When inside current week, soften borders for better integration */
+details.week.current-week .sessions .session {
+  border-bottom: 1px solid #e7ebf5;
+}
+
+/* ==================Course notice ============*/
+.notice-box {
+  border-left: 6px solid #b31b1b;       /* Cornell red accent */
+  background-color: #fdf7f7;            /* soft red-tinted background */
+  padding: 18px 22px;
+  margin: 25px 0 35px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+.notice-box p {
+  margin: 0 0 10px;
+}
+.notice-box a {
+  color: #005ea2;                      /* Cornell Tech blue link */
+  text-decoration: underline;
+}
+.notice-box strong {
+  color: #000;
+}
+
+
+/* Assignments – Option 3 (icon list with Cornell accent) */
+.asg-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+}
+
+.asg-item {
+  margin-bottom: 1.2rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.asg-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.asg-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.asg-link {
+  font-weight: 600;
+  font-size: 1.45rem; /* increased for better alignment with readings */
+  color: #00205B; /* Cornell Tech blue */
+  text-decoration: none;
+}
+
+.asg-link:hover {
+  text-decoration: underline;
+}
+
+.asg-badge {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  color: #555;
+  background: #fff;
+}
+
+.asg-badge-past {
+  color: #888;
+  border-color: #ccc;
+  background: #f4f4f4;
+}
+
+.asg-badge-due {
+  color: #004B87;
+  border-color: #004B87;
+  background: #fff;
+}
+
+/* 🎯 New: highlight upcoming due within 14 days */
+.asg-badge-upcoming {
+  color: #8A100B;
+  border-color: #8A100B;
+  background: #fdecea; /* light Cornell red/pink */
+  font-weight: 600;
+}
+/* Soft highlight for entire upcoming assignment row (optional) */
+.asg-item-upcoming {
+  background: #f3f8ff;
+  border-left: 4px solid #004B87;
+  border-radius: 6px;
+  padding-left: .6rem;
+}
+.asg-summary {
+  margin: 0.3rem 0 0.5rem 1.7rem;
+  color: #333;
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+
+.asg-actions {
+  margin-left: 1.7rem;
+  font-size: 1.25rem;
+}
+
+.asg-action {
+  color: #004B87;
+  text-decoration: none;
+}
+
+.asg-action:hover {
+  text-decoration: underline;
+}
+
+/* small screens */
+@media (max-width: 480px) {
+  .asg-summary,
+  .asg-actions {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Suggested Readings note style */
+.paper-note {
+  font-size: 0.95rem;        /* smaller than main text */
+  color: #555;               /* muted gray tone */
+  margin-top: -0.3rem;       /* tighten spacing above */
+  margin-bottom: 0.8rem;     /* gentle spacing below */
+  font-style: italic;        /* optional, for academic tone */
+  max-width: 700px;
+  line-height: 1.4;
+}

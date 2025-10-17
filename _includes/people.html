@@ -1,0 +1,36 @@
+<div class="docs-section" id="people">
+  <h4>Instructor, TAs, and Graders</h4>
+
+  <div id="member-container"
+       style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
+
+    {%- for person in site.data.people -%}
+    <div class="box" style="text-align: center; width: 160px;">
+     <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}"
+           style="width: 120px; height: 200px; object-fit: cover; border-radius: 10%;">
+
+      <p style="margin-top: 8px;">
+        {%- if person.homepage -%}
+          <b><a href="{{ person.homepage }}">{{ person.name }}</a></b><br>
+        {%- else -%}
+          <b>{{ person.name }}</b><br>
+        {%- endif -%}
+
+        {{ person.role }}<br>
+
+        {%- if person.email -%}
+          <a href="mailto:{{ person.email }}">Email</a><br>
+        {%- endif -%}
+
+        {%- if person.scholar -%}
+          <a href="{{ person.scholar }}" target="_blank" title="Google Scholar">
+            <i class="ai ai-google-scholar ai-2x"
+               style="font-size:20px; color:#14003a"></i>
+          </a>
+        {%- endif -%}
+      </p>
+    </div>
+    {%- endfor -%}
+
+  </div>
+</div>

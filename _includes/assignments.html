@@ -1,0 +1,83 @@
+<section id="assignments" class="docs-section">
+  <h4>Assignments & Project</h4>
+
+  {%- assign asg = site.data.assignments -%}
+
+  <ul class="asg-list">
+    {%- for a in asg -%}
+      <li class="asg-item">
+        <div class="asg-title">
+          <span class="asg-emoji">📘</span>
+
+          {%- if a.pdf -%}
+            <a href="{{ a.pdf | relative_url }}" class="asg-link">{{ a.title }}</a>
+          {%- else -%}
+            <span class="asg-link">{{ a.title }}</span>
+          {%- endif -%}
+
+          {%- if a.due -%}
+            {%- assign due_iso = a.due | date: "%Y-%m-%d" -%}
+            <span
+              class="asg-badge asg-badge-due js-due"
+              data-due="{{ due_iso }}"
+              data-label="{{ a.due | date: '%b %d, %Y' }}">
+              Due: {{ a.due | date: "%b %d, %Y" }}
+            </span>
+          {%- endif -%}
+        </div>
+
+        {%- if a.summary -%}
+          <p class="asg-summary">{{ a.summary }}</p>
+        {%- endif -%}
+
+        <div class="asg-actions">
+          {%- if a.starter -%}
+            <a href="{{ a.starter | relative_url }}" class="asg-action">Starter code ↗</a>
+          {%- endif -%}
+          {%- if a.solutions -%}
+            &nbsp;•&nbsp;<a href="{{ a.solutions | relative_url }}" class="asg-action">Solutions</a>
+          {%- endif -%}
+          {%- if a.extra -%}
+            &nbsp;•&nbsp;<a href="{{ a.extra | relative_url }}" class="asg-action">Extra materials</a>
+          {%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <script>
+  (function () {
+    // Compute local-day window: [today, today+7)
+    const today = new Date(); today.setHours(0,0,0,0);
+    const in7   = new Date(today); in7.setDate(in7.getDate() + 7);
+
+    document.querySelectorAll('.js-due').forEach(el => {
+      const iso  = el.getAttribute('data-due');     // YYYY-MM-DD
+      const nice = el.getAttribute('data-label');   // e.g., "Nov 03, 2025"
+      if (!iso) return;
+
+      // Interpret due date as end-of-day local time
+      const due = new Date(iso + 'T23:59:59');
+      if (isNaN(due.getTime())) return;
+
+      // Reset classes
+      el.classList.remove('asg-badge-past','asg-badge-upcoming','asg-badge-due');
+
+      if (due < today) {
+        el.classList.add('asg-badge','asg-badge-past');
+        el.textContent = 'Past: ' + nice;
+      } else if (due >= today && due < in7) {
+        el.classList.add('asg-badge','asg-badge-upcoming');
+        el.textContent = 'Due: ' + nice;
+
+        // Optional: tint the whole item if upcoming
+        const item = el.closest('.asg-item');
+        if (item) item.classList.add('asg-item-upcoming');
+      } else {
+        el.classList.add('asg-badge','asg-badge-due');
+        el.textContent = 'Due: ' + nice;
+      }
+    });
+  })();
+  </script>
+</section>

@@ -1,0 +1,7 @@
+source:      .
+destination: ./_site
+baseurl: "/ECE5290"
+
+collections:
+  projects:
+    output: true
