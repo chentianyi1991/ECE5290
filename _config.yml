@@ -1,5 +1,6 @@
 source:      .
 destination: ./_site
+url: "https://chentianyi1991.github.io"
 baseurl: "/ECE5290"
 
 collections:
