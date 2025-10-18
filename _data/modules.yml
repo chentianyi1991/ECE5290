@@ -108,7 +108,7 @@
   
 - week: 7
   date: 2025-10-08
-  title: "Data and Model parallelism in Distributed Training"
+  title: "Data and Model Parallelism in Distributed Training"
   summary: >
     Data and model parallelism in distributed training; local SGD, synchronization intervals,
     and communication–computation balancing.
@@ -129,19 +129,19 @@
   
 - week: 9
   date: 2025-10-20
-  title: "Decentralized Algorithms: Consensus GD and Its Convergence"
+  title: "Communication-Efficient Distributed Methods"
   summary: >
-    Analysis of decentralized gradient descent, spectral gap influence on convergence,
-    and geometric interpretation of consensus dynamics.
+    Quantization, sparsification, and local updates; techniques to reduce bandwidth
+    while preserving convergence in distributed learning.
   slides_url: "/assets/slides/Lec14.pdf"
   note: HW 3 due (10/20)
   
 - week: 9
   date: 2025-10-22
-  title: "Decentralized Gradient Tracking and Its Convergence"
+  title: "Decentralized Algorithms: Consensus GD and Its Convergence"
   summary: >
     Gradient tracking algorithms, convergence under directed and time-varying graphs.
-  slides_url: "/assets/slides/Lec15.pdf"
+  slides_url: "/assets/slides/Lec16.pdf"
   
 - week: 10
   date: 2025-10-27
