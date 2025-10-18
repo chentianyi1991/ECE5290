@@ -382,10 +382,10 @@ details.week.current-week .sessions .session {
 .notice-box {
   border-left: 6px solid #b31b1b;       /* Cornell red accent */
   background-color: #fdf7f7;            /* soft red-tinted background */
-  padding: 18px 22px;
+  padding: 14px 16px;
   margin: 25px 0 35px;
   border-radius: 8px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 .notice-box p {
