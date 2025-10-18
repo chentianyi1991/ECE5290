@@ -21,7 +21,7 @@
 
 - id: "sample"
   title: "Extra Practice Problems"
-  due: 2025-10-29
+  due: 2025-10-27
   pdf: "/assets/hw/ECE_5290_QA.pdf"
   solutions: "/assets/hw/ECE_5290_QA_sol.pdf" 
   starter: null   
