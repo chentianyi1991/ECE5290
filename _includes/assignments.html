@@ -47,9 +47,9 @@
 
   <script>
   (function () {
-    // Compute local-day window: [today, today+7)
+    // Compute local-day window: [today, today+10)
     const today = new Date(); today.setHours(0,0,0,0);
-    const in7   = new Date(today); in7.setDate(in7.getDate() + 7);
+    const in10   = new Date(today); in10.setDate(in10.getDate() + 10);
 
     document.querySelectorAll('.js-due').forEach(el => {
       const iso  = el.getAttribute('data-due');     // YYYY-MM-DD
@@ -66,7 +66,7 @@
       if (due < today) {
         el.classList.add('asg-badge','asg-badge-past');
         el.textContent = 'Past: ' + nice;
-      } else if (due >= today && due < in7) {
+      } else if (due >= today && due < in10) {
         el.classList.add('asg-badge','asg-badge-upcoming');
         el.textContent = 'Due: ' + nice;
 
