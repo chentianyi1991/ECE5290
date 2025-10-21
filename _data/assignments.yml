@@ -26,6 +26,12 @@
   solutions: "/assets/hw/ECE_5290_QA_sol.pdf" 
   starter: null   
 
+- id: "proposal"
+  title: "Project Idea"
+  due: 2025-11-1
+  pdf: "https://forms.gle/JfaUrxbWLYuAT8vU7"
+  starter: null   
+
 - id: "hw4"
   title: "HW4: Implementation of Various Forms of All-reduce"
   due: 2025-11-15
