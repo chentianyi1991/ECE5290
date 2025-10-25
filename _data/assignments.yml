@@ -17,7 +17,7 @@
   title: "HW3: Consensus Averaging and Spectral Properties of Graphs"
   due: 2025-10-20
   pdf: "/assets/hw/hw3.pdf"
-    solutions: "/assets/hw/hw3_sol.pdf"
+  solutions: "/assets/hw/hw3_sol.pdf"
   starter: "/assets/hw/hw3_starter.py"
 
 - id: "sample"
