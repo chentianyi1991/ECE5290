@@ -160,6 +160,7 @@
   summary: >
     Robustness against adversarial clients, Byzantine attacks, and noisy updates;
     algorithmic defenses and aggregation strategies.
+  slides_url: "/assets/slides/Lec17.pdf"   
   note: Try every effort to attend; attendance bonus 
   
 - week: 11
