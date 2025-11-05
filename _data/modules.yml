@@ -165,10 +165,11 @@
   
 - week: 11
   date: 2025-11-05
-  title: "Federated learning: personalization, fairness, and heterogeneity"
+  title: "The curse of data heterogeneity in distributed learning"
   summary: >
-    Personalization techniques, fairness trade-offs, and handling heterogeneous data distributions
+    Personalization techniques and handling heterogeneous data distributions
     in federated settings.
+  slides_url: "/assets/slides/Lec18.pdf"  
     
 - week: 12
   date: 2025-11-10
