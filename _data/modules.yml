@@ -190,22 +190,22 @@
 - week: 13
   date: 2025-11-17
   title: "Analogc computing for energy-efficient AI: Part I"
-  summary: > 
-  Principles of analog computing for neural network inference, focusing on in-memory computation, and hardware–algorithm co-design.
+  summary: >
+    Principles of analog computing for neural network inference, focusing on in-memory computation, and hardware–algorithm co-design.
   slides_url: "/assets/slides/Lec21.pdf"     
 
 - week: 13
   date: 2025-11-19
   title: "Analogc computing for energy-efficient AI: Part II"
   summary: >
-  Analog computing techniques for neural network training, highlighting gradient computation and hardware–algorithm co-design under device nonidealities.
+    Analog computing techniques for neural network training, highlighting gradient computation and hardware–algorithm co-design under device nonidealities.
   slides_url: "/assets/slides/Lec22.pdf"     
     
 - week: 14
   date: 2025-11-24
   title: "Pre-training and fine-tuning LLMs"
   summary: >
-  Optimization methods for pre-training and fine-tuning LLMs, including data scaling, parameter-efficient adaptation, and distributed training tradeoffs.
+    Optimization methods for pre-training and fine-tuning LLMs, including data scaling, parameter-efficient adaptation, and distributed training tradeoffs.
   slides_url: "/assets/slides/Lec23.pdf"      
     
 - week: 14
