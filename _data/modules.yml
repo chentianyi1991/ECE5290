@@ -173,39 +173,44 @@
     
 - week: 12
   date: 2025-11-10
-  title: "Asynchrony, Delays, and Straggler Mitigation"
+  title: "Transformers: Architecture, Parameters, and Memories"
   summary: >
-    Asynchronous optimization, stale gradients, and system-level strategies
-    to mitigate delays and stragglers in large clusters.
+  Transformer architectures, parameter scaling laws,
+  and memory components relevant to efficient and distributed training.
+   slides_url: "/assets/slides/Lec19.pdf"     
     
 - week: 12
   date: 2025-11-12
-  title: From algorithms to system implementations
+  title: "Memory footprint of GPT and mixed precision training"
   summary: >
-    Bridging theory and practice — implementing distributed optimization on modern hardware,
-    parameter servers, and deep learning frameworks.
+Memory bottlenecks in GPT training, covering parameters, activations, optimizer states,
+  and how mixed-precision methods enable efficient distributed optimization.
   note: HW 4 due (11/14)
+    slides_url: "/assets/slides/Lec20.pdf"  
   
 - week: 13
   date: 2025-11-17
-  title: "Distributed LLM post-training via deepspeed"
+  title: "Analogc omputing for energy-efficient AI: Part I"
   summary: >
-    Practical pipeline for distributed fine-tuning and instruction tuning of large language models
-    using DeepSpeed and ZeRO optimizations.
+   Principles of analog computing for neural network inference,
+  focusing on in-memory computation, and hardware–algorithm co-design.
+   slides_url: "/assets/slides/Lec21.pdf"     
 
 - week: 13
   date: 2025-11-19
-  title: Hypeparameter optimization for distributed learning
+  title: "Analogc omputing for energy-efficient AI: Part II"
   summary: >
-    Techniques for tuning learning rates, batch sizes, and communication frequency in distributed systems;
-    multi-fidelity and population-based search methods.
+  Analog computing techniques for neural network training,
+  highlighting gradient computation and hardware–algorithm co-design under device nonidealities.
+   slides_url: "/assets/slides/Lec22.pdf"     
     
 - week: 14
   date: 2025-11-24
-  title: "Multi-objective training for distributed learning"
+  title: "Pre-training and fine-tuning LLMs"
   summary: >
-    Balancing multiple objectives in distributed training — accuracy, efficiency, and fairness.
-    Introduction to Pareto-optimal solutions and preference-guided optimization.
+ Optimization methods for pre-training and fine-tuning LLMs,
+  including data scaling, parameter-efficient adaptation, and distributed training tradeoffs.
+  slides_url: "/assets/slides/Lec23.pdf"      
     
 - week: 14
   date: 2025-11-26
