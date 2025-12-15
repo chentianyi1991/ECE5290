@@ -173,7 +173,7 @@
     
 - week: 12
   date: 2025-11-10
-  title: "Transformers: Architecture, Parameters, and Memories"
+  title: "Transformers - Architecture, Parameters, and Memories"
   summary: >
     Transformer architectures, parameter scaling laws, and memory components relevant to efficient and distributed training.
   slides_url: "/assets/slides/Lec19.pdf"     
@@ -212,6 +212,7 @@
   date: 2025-11-26
   title: "No class - Thanksgiving"
   note: HW 5 due (12/1)
+  
 - week: 15
   date: 2025-12-01
   title: "Project presentation - Part I"
