@@ -177,16 +177,16 @@
   summary: >
   Transformer architectures, parameter scaling laws,
   and memory components relevant to efficient and distributed training.
-   slides_url: "/assets/slides/Lec19.pdf"     
+  slides_url: "/assets/slides/Lec19.pdf"     
     
 - week: 12
   date: 2025-11-12
   title: "Memory footprint of GPT and mixed precision training"
   summary: >
-Memory bottlenecks in GPT training, covering parameters, activations, optimizer states,
+  Memory bottlenecks in GPT training, covering parameters, activations, optimizer states,
   and how mixed-precision methods enable efficient distributed optimization.
   note: HW 4 due (11/14)
-    slides_url: "/assets/slides/Lec20.pdf"  
+  slides_url: "/assets/slides/Lec20.pdf"  
   
 - week: 13
   date: 2025-11-17
@@ -194,7 +194,7 @@ Memory bottlenecks in GPT training, covering parameters, activations, optimizer 
   summary: >
    Principles of analog computing for neural network inference,
   focusing on in-memory computation, and hardware–algorithm co-design.
-   slides_url: "/assets/slides/Lec21.pdf"     
+  slides_url: "/assets/slides/Lec21.pdf"     
 
 - week: 13
   date: 2025-11-19
@@ -202,13 +202,13 @@ Memory bottlenecks in GPT training, covering parameters, activations, optimizer 
   summary: >
   Analog computing techniques for neural network training,
   highlighting gradient computation and hardware–algorithm co-design under device nonidealities.
-   slides_url: "/assets/slides/Lec22.pdf"     
+  slides_url: "/assets/slides/Lec22.pdf"     
     
 - week: 14
   date: 2025-11-24
   title: "Pre-training and fine-tuning LLMs"
   summary: >
- Optimization methods for pre-training and fine-tuning LLMs,
+  Optimization methods for pre-training and fine-tuning LLMs,
   including data scaling, parameter-efficient adaptation, and distributed training tradeoffs.
   slides_url: "/assets/slides/Lec23.pdf"      
     
