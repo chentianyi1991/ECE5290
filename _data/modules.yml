@@ -175,27 +175,28 @@
   date: 2025-11-10
   title: "Transformers: Architecture, Parameters, and Memories"
   summary: >
-  Transformer architectures, parameter scaling laws, and memory components relevant to efficient and distributed training.
+    Transformer architectures, parameter scaling laws, and memory components relevant to efficient and distributed training.
   slides_url: "/assets/slides/Lec19.pdf"     
     
 - week: 12
   date: 2025-11-12
   title: "Memory footprint of GPT and mixed precision training"
   summary: >
-  Memory bottlenecks in GPT training, covering parameters, activations, optimizer states, and how mixed-precision methods enable efficient distributed optimization.
+    Memory bottlenecks in GPT training, covering parameters, activations, optimizer states, and how mixed-precision methods enable efficient
+    distributed optimization.
   note: HW 4 due (11/14)
   slides_url: "/assets/slides/Lec20.pdf"  
   
 - week: 13
   date: 2025-11-17
-  title: "Analogc omputing for energy-efficient AI: Part I"
-  summary: >
+  title: "Analogc computing for energy-efficient AI: Part I"
+  summary: > 
   Principles of analog computing for neural network inference, focusing on in-memory computation, and hardware–algorithm co-design.
   slides_url: "/assets/slides/Lec21.pdf"     
 
 - week: 13
   date: 2025-11-19
-  title: "Analogc omputing for energy-efficient AI: Part II"
+  title: "Analogc computing for energy-efficient AI: Part II"
   summary: >
   Analog computing techniques for neural network training, highlighting gradient computation and hardware–algorithm co-design under device nonidealities.
   slides_url: "/assets/slides/Lec22.pdf"     
