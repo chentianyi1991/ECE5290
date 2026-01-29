@@ -17,11 +17,21 @@
  <!-- ====== Course Header ====== -->
 <header style="text-align: center; margin: 40px 0;">
   <!-- Logo ABOVE the course title -->
-  <div style="margin-top: 15px;">
+  <!-- <div style="margin-top: 15px;">
     <img src="{{ '/assets/tech.jpeg' | relative_url }}"
          alt="Cornell Tech"
          style="height: 125px; max-width: 160%; border-radius: 12px;">
-  </div>
+  </div> -->
+
+  <div style="margin-top: 15px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+  <img src="{{ '/assets/tech.jpeg' | relative_url }}"
+       alt="Cornell Tech"
+       style="height: 125px; border-radius: 12px;">
+
+  <img src="{{ '/assets/CornellDuffield.svg' | relative_url }}"
+       alt="Duffield logo"
+       style="height: 125px; border-radius: 12px;">
+ </div>
 
   <h3 style="margin-top: 1rem;">
     <b>ECE 5290/7290 & ORIE 5290: Distributed Optimization for Machine Learning and AI</b>
