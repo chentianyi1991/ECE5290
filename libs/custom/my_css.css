@@ -554,8 +554,8 @@ details.week.current-week .sessions .session {
 
   .course-logos .logo-tech{
     order: 1;
-    height: 80px;
-    max-width: 220px;         /* prevent big crest+text */
+    height: 96px;
+    max-width: 260px;         /* prevent big crest+text */
   }
 
   .course-logos .logo-duffield{
