@@ -511,3 +511,48 @@ details.week.current-week .sessions .session {
   max-width: 700px;
   line-height: 1.4;
 }
+
+/* ===== Course header logos ===== */
+.course-logos {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;     /* center as a group */
+  align-items: center;         /* vertical alignment */
+  gap: 16px;
+  flex-wrap: wrap;             /* allow wrapping on small screens */
+}
+
+/* Keep images well-behaved */
+.course-logos .logo {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Desktop sizes */
+.course-logos .logo-tech {
+  height: 120px;
+}
+
+.course-logos .logo-duffield {
+  height: 105px;
+}
+
+/* Mobile layout: stack + enforce order */
+@media (max-width: 520px) {
+  .course-logos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .course-logos .logo-tech {
+    order: 1;
+    height: 90px;
+  }
+
+  .course-logos .logo-duffield {
+    order: 2;
+    height: 80px;
+  }
+}
