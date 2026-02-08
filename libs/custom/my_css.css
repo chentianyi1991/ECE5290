@@ -531,18 +531,18 @@ details.week.current-week .sessions .session {
 
 /* Desktop defaults (one row) */
 .course-logos .logo-tech{
-  height: 98px;               /* was 120 */
+  height: 108px;               /* was 120 */
 }
 
 .course-logos .logo-duffield{
-  height: 80px;               /* was 105 */
+  height: 88px;               /* was 105 */
   max-width: 260px;           /* keep wordmark from stretching */
 }
 
 /* Tablet: slightly smaller */
 @media (max-width: 900px){
-  .course-logos .logo-tech{ height: 64px; }
-  .course-logos .logo-duffield{ height: 54px; max-width: 240px; }
+  .course-logos .logo-tech{ height: 84px; }
+  .course-logos .logo-duffield{ height: 70px; max-width: 240px; }
 }
 
 /* Phone: keep them compact + deterministic order */
@@ -554,13 +554,13 @@ details.week.current-week .sessions .session {
 
   .course-logos .logo-tech{
     order: 1;
-    height: 70px;
+    height: 80px;
     max-width: 220px;         /* prevent big crest+text */
   }
 
   .course-logos .logo-duffield{
     order: 2;
-    height: 56px;
+    height: 64px;
     max-width: 260px;         /* cap wordmark width */
   }
 }
