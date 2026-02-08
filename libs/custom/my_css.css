@@ -513,46 +513,54 @@ details.week.current-week .sessions .session {
 }
 
 /* ===== Course header logos ===== */
-.course-logos {
+.course-logos{
   margin-top: 15px;
   display: flex;
-  justify-content: center;     /* center as a group */
-  align-items: center;         /* vertical alignment */
-  gap: 16px;
-  flex-wrap: wrap;             /* allow wrapping on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;            /* allow wrap when needed */
 }
 
-/* Keep images well-behaved */
-.course-logos .logo {
+.course-logos .logo{
   display: block;
   height: auto;
   max-width: 100%;
   object-fit: contain;
 }
 
-/* Desktop sizes */
-.course-logos .logo-tech {
-  height: 120px;
+/* Desktop defaults (one row) */
+.course-logos .logo-tech{
+  height: 78px;               /* was 120 */
 }
 
-.course-logos .logo-duffield {
-  height: 105px;
+.course-logos .logo-duffield{
+  height: 62px;               /* was 105 */
+  max-width: 260px;           /* keep wordmark from stretching */
 }
 
-/* Mobile layout: stack + enforce order */
-@media (max-width: 520px) {
-  .course-logos {
+/* Tablet: slightly smaller */
+@media (max-width: 900px){
+  .course-logos .logo-tech{ height: 64px; }
+  .course-logos .logo-duffield{ height: 54px; max-width: 240px; }
+}
+
+/* Phone: keep them compact + deterministic order */
+@media (max-width: 520px){
+  .course-logos{
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
-  .course-logos .logo-tech {
+  .course-logos .logo-tech{
     order: 1;
-    height: 90px;
+    height: 56px;
+    max-width: 220px;         /* prevent big crest+text */
   }
 
-  .course-logos .logo-duffield {
+  .course-logos .logo-duffield{
     order: 2;
-    height: 80px;
+    height: 44px;
+    max-width: 260px;         /* cap wordmark width */
   }
 }
