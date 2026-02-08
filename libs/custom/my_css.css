@@ -531,11 +531,11 @@ details.week.current-week .sessions .session {
 
 /* Desktop defaults (one row) */
 .course-logos .logo-tech{
-  height: 78px;               /* was 120 */
+  height: 98px;               /* was 120 */
 }
 
 .course-logos .logo-duffield{
-  height: 62px;               /* was 105 */
+  height: 80px;               /* was 105 */
   max-width: 260px;           /* keep wordmark from stretching */
 }
 
@@ -554,13 +554,13 @@ details.week.current-week .sessions .session {
 
   .course-logos .logo-tech{
     order: 1;
-    height: 56px;
+    height: 70px;
     max-width: 220px;         /* prevent big crest+text */
   }
 
   .course-logos .logo-duffield{
     order: 2;
-    height: 44px;
+    height: 56px;
     max-width: 260px;         /* cap wordmark width */
   }
 }
